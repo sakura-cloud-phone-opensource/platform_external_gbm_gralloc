@@ -31,14 +31,7 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libcutils \
 	libhardware \
-
-ifeq ($(shell expr $(PLATFORM_SDK_VERSION) \>= 30), 1)
-LOCAL_SHARED_LIBRARIES += \
-        libgbm_mesa
-else
-LOCAL_SHARED_LIBRARIES += \
-        libgbm
-endif
+	libgbm
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
 	$(LOCAL_PATH)
